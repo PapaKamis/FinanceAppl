@@ -2,9 +2,6 @@ from django.shortcuts import render
 from .models import Post, Hist
 from django.contrib.auth.models import User
 import pandas as pd
-import matplotlib.pyplot as plt
-from bokeh.plotting import figure, output_file, show
-from bokeh.embed import components
 
 
 import plotly.graph_objects as go
@@ -75,17 +72,8 @@ def home(request):
 def about(request):
 
 
-    x = [1,2,3,4,5]
-    y = [1, 2, 3, 4, 5]
-
-    plot = figure(title= 'Line Graph', x_axis_label='X-axis', y_axis_label='Y-Axis', plot_width=400, plot_height=400)
-    plot.line(x,y,line_width=2)
-    script, div = components(plot)
-
-
     context = {
-        'script': script,
-        'div': div,
+        'script': 'k',
     }
 
     return render(request, 'blog/about.html', context)
