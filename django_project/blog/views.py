@@ -52,6 +52,8 @@ df = pd.DataFrame(h_orm)
 # '2.3.0'
 
 
+
+
 def home(request):
     fig = go.Figure(
         data=[go.Bar(x=['kamis', 'kel'],y=[15, 3])],
